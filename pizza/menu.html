@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Hunter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="menu-body">
+    <header class="header">
+        <nav>
+            <ul class="navbar">
+                <li class="logo"><a href="#">Pizza Hunter</a></li>
+                <li class="navItem"><a href="home.html">Home</a></li>
+                <li class="navItem"><a href="about.html">About</a></li>
+
+                <li class="navItem"><a href="#">Menu</a></li>
+                <li class="navItem"><a href="contact.html">Contact</a></li>
+                <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="menu-main">
+        <section class="menu-section">
+            <div>
+                <h1>Menu</h1>
+            </div>
+            <div class="menu-parent">
+            
+            <div class="menu-item">
+                <img src="hello/img2.jpeg" class="menu-img">
+                <h3>Special Pizza</h3>
+            </div>
+            <div class="menu-item">
+                <img src="hello/img3.jpeg" class="menu-img">
+                <h3>Cheesy Pizza</h3>
+            </div>
+            <div class="menu-item">
+                <img src="hello/img4.jpeg" class="menu-img">
+                <h3>Mini Pizza</h3>
+            </div>
+            <div class="menu-item">
+                <img src="hello/img5.jpeg" class="menu-img">
+                <h3>Pure-Veg Pizza</h3>
+            </div>
+            <div class="menu-item">
+                <img src="hello/img6.jpeg" class="menu-img">
+                <h3>Burgers</h3>
+            </div>
+            <div class="menu-item">
+                <img src="hello/img7.jpeg" class="menu-img">
+                <h3>Beverages</h3>
+            </div>
+            <div class="menu-item">
+                <img src="hello/img8.jpeg" class="menu-img">
+                <h3>Sausages</h3>
+            </div>
+            <div class="menu-item">
+                <img src="hello/img1.jpeg" class="menu-img">
+                <h3>Others</h3>
+            </div>
+        </div>
+
+
+        </section>
+    </main>
+
+
+    <script>
+        const toggler = document.querySelector('.toggle');
+        const navbar = document.querySelector('.navbar');
+        const navItems = document.querySelectorAll('.navItem');
+        console.log(navItems);
+
+        toggler.addEventListener('click', (e) => {
+            if (navbar.classList.contains('active')) {
+                navbar.classList.remove('active');
+                toggler.querySelector('a').innerHTML = '<i class="fas fa-bars"></i>';
+            } else {
+                navbar.classList.add('active');
+                toggler.querySelector('a').innerHTML = '<i class="fas fa-window-close"></i>';
+            }
+        });
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navbar.classList.remove('active');
+                toggler.querySelector('a').innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
